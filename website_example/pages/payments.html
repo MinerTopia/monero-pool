@@ -17,11 +17,21 @@
     }
 </style>
 
-<div class="paymentsStatHolder">
-    <span class="bg-primary">Total Payments: <span id="paymentsTotal"></span></span>
-    <span class="bg-info">Total Miners Paid: <span id="paymentsTotalPaid"></span></span>
-    <span class="bg-info">Minimum Payment Threshold: <span id="paymentsMinimum"></span></span>
-    <span class="bg-info">Denomination Unit: <span id="paymentsDenomination"></span></span>
+<div class="row">
+	<div class="col-md-6">
+		<div class="paymentsStatHolder">
+		    <span class="bg-primary">Total Payments: <span id="paymentsTotal"></span></span>
+		    <span class="bg-info">Total Miners Paid: <span id="paymentsTotalPaid"></span></span>
+		    <span class="bg-info">Minimum Payment Threshold: <span id="paymentsMinimum"></span></span>
+		    <span class="bg-info">Denomination Unit: <span id="paymentsDenomination"></span></span>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="paymentsStatHolder">
+		    <p class="lead"><strong>Payout Schedule</strong></p>
+			<p>Unpaid balances that have passed the Minimum Payout Threshold are paid once per day, to minimize fees.</p>
+		</div>
+	</div>
 </div>
 
 <hr>
