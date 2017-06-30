@@ -119,11 +119,14 @@
 	<div class="col-sm-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				Market
+				Market Pricing
 			</div>
 			<div class="panel-body">
 				<div id="marketHeader"></div>
+			</div>	
+			<div class="panel-footer">
 		        <div class="marketFooter">Updated: <span id="marketLastUpdated"></span></div>
+		        <div class="marketFooter">Powered by <a href="https://www.cryptonator.com/">Cryptonator</a></div>
 	        </div>	
 		</div>
 	</div>
@@ -131,25 +134,29 @@
 
 <hr>
 
-<div id="miningProfitCalc">
-    <h3>Estimate Mining Profits</h3>
-    <div id="calcHashHolder">
-        <div class="input-group">
-            <input type="number" class="form-control" id="calcHashRate" placeholder="Enter Your Hash Rate">
-            <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="calcHashDropdown">
-                    <span id="calcHashUnit" data-mul="1">KH/s</span> <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-right" role="menu" id="calcHashUnits">
-                    <li><a href="#" data-mul="0">H/s</a></li>
-                    <li><a href="#" data-mul="1">KH/s</a></li>
-                    <li><a href="#" data-mul="2">MH/s</a></li>
-                </ul>
-            </div>
-            <span class="input-group-addon">=</span>
-            <span class="input-group-addon" id="calcHashResultsHolder"><span id="calcHashAmount"></span> <span id="calcHashSymbol"></span>/day</span>
-        </div>
-    </div>
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div id="miningProfitCalc">
+		    <h3>Estimate Mining Reward</h3>
+		    <div id="calcHashHolder">
+		        <div class="input-group">
+		            <input type="number" class="form-control" id="calcHashRate" placeholder="Enter Your Hash Rate">
+		            <div class="input-group-btn">
+		                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="calcHashDropdown">
+		                    <span id="calcHashUnit" data-mul="1">KH/s</span> <span class="caret"></span>
+		                </button>
+		                <ul class="dropdown-menu dropdown-menu-right" role="menu" id="calcHashUnits">
+		                    <li><a href="#" data-mul="0">H/s</a></li>
+		                    <li><a href="#" data-mul="1">KH/s</a></li>
+		                    <li><a href="#" data-mul="2">MH/s</a></li>
+		                </ul>
+		            </div>
+		            <span class="input-group-addon">=</span>
+		            <span class="input-group-addon" id="calcHashResultsHolder"><span id="calcHashAmount"></span> <span id="calcHashSymbol"></span>/day</span>
+		        </div>
+		    </div>
+		</div>
+	</div>
 </div>
 
 <hr>
