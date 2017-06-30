@@ -17,8 +17,6 @@
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-
     <script src="config.js"></script>
     <script src="custom.js"></script>
     <link href="custom.css" rel="stylesheet">
@@ -47,6 +45,8 @@ html {
 .nav .open > a:focus {
   background-color: transparent;
 }
+
+
 /*-------------------------------*/
 /*           Wrappers            */
 /*-------------------------------*/
@@ -85,7 +85,7 @@ html {
   display: none;
 }
 #page-content-wrapper {
-  padding-top: 70px;
+  /*padding-top: 70px;*/
   width: 100%;
 }
 /*-------------------------------*/
@@ -106,7 +106,7 @@ html {
   width: 100%;
 }
 .sidebar-nav li:before {
-  background-color: #1c1c1c;
+  background-color: #34254b;
   content: '';
   height: 100%;
   left: 0;
@@ -234,17 +234,17 @@ html {
 }
 .hamburger.is-closed .hamb-top {
   -webkit-transition: all 0.35s ease-in-out;
-  background-color: rgba(102, 51, 153, 0.7);
+  background-color: rgba(102, 51, 153, 0.9);
   top: 5px;
 }
 .hamburger.is-closed .hamb-middle {
-  background-color: rgba(102, 51, 153, 0.7);
+  background-color: rgba(102, 51, 153, 0.9);
   margin-top: -2px;
   top: 50%;
 }
 .hamburger.is-closed .hamb-bottom {
   -webkit-transition: all 0.35s ease-in-out;
-  background-color: rgba(102, 51, 153, 0.7);
+  background-color: rgba(102, 51, 153, 0.9);
   bottom: 5px;
 }
 .hamburger.is-closed .hamb-top,
@@ -364,22 +364,15 @@ html {
             font-size: 0.9em;
         }
 
-        footer{
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #FFF;
-        }
-
-        footer > div{
-            margin: 10px auto;
-            text-align: center;
+        footer {
+          background-color: #fff;
         }
 
     </style>
 
 </head>
 <body>
+
 <script>
         $(document).ready(function () {
           var trigger = $('.hamburger'),
@@ -606,7 +599,7 @@ html {
     }
 
     function updateIndex(){
-        updateText('coinName', lastStats.config.coin);
+        
         updateText('poolVersion', lastStats.config.version);
     }
 
@@ -620,6 +613,7 @@ html {
 
 
 </script>
+
 <div id="wrapper">
     <div class="overlay"></div>
 
@@ -627,7 +621,7 @@ html {
             <ul class="nav sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                       <span id="coinName"> Pool</span>
+                       Teracycle Pool
                     </a>
                 </li>
                 <li class="active"><a class="hot_link" data-page="home.html" href="#">
@@ -645,11 +639,15 @@ html {
                 <li><a class="hot_link" data-page="payments.html" href="#payments">
                     <i class="fa fa-paper-plane-o"></i> Payments
                 </a></li>
-
                 <li><a class="hot_link" data-page="market.html" href="#market">
                     <i class="fa fa-btc"></i> Market <sup>new!</sup>
                 </a></li>
+                <li><a class="hot_link" data-page="market.html" href="#market">
+                    <i class="fa fa-btc"></i> Donate <sup>new!</sup>
+                </a></li>
+
             </ul>
+            <span id="poolVersion"></span>
         </nav>
 <div id="page-content-wrapper">
           <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
@@ -662,16 +660,77 @@ html {
                 
             </div>
                 <div class="row">
-    <div id="page"></div>
+                    <div id="page"></div>
 
-    <p id="loading" class="text-center"><i class="fa fa-circle-o-notch fa-spin"></i></p>
+                     <p id="loading" class="text-center"><i class="fa fa-circle-o-notch fa-spin"></i></p>
 
 </div>
 
 
-        <small><span id="poolVersion"></span>
+       
      
-
 
 </body>
 </html>
+<footer>
+<!-- TradingView Widget BEGIN -->
+<span id="tradingview-copyright"><a ref="nofollow" target="_blank" href="http://www.tradingview.com" style="color: rgb(173, 174, 176); font-family: &quot;Trebuchet MS&quot;, Tahoma, Arial, sans-serif; font-size: 13px;">Quotes by <span style="color: #3BB3E4">TradingView</span></a></span>
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js">{
+  "symbols": [
+    {
+      "description": "",
+      "proName": "KRAKEN:XMRUSD"
+    },
+    {
+      "description": "",
+      "proName": "BITFINEX:XMRBTC"
+    },
+    {
+      "description": "",
+      "proName": "KRAKEN:XMREUR"
+    },
+    {
+      "description": "",
+      "proName": "BITSTAMP:BTCUSD"
+    },
+    {
+      "description": "",
+      "proName": "COINBASE:BTCEUR"
+    },
+    {
+      "description": "",
+      "proName": "POLONIEX:SCBTC"
+    },
+    {
+      "description": "",
+      "proName": "POLONIEX:DASHXMR"
+    },
+    {
+      "description": "",
+      "proName": "KRAKEN:XMRXBT"
+    },
+    {
+      "description": "",
+      "proName": "POLONIEX:DOGEBTC"
+    },
+    {
+      "description": "",
+      "proName": "COINBASE:ETHBTC"
+    },
+    {
+      "description": "",
+      "proName": "COINBASE:ETHUSD"
+    },
+    {
+      "description": "",
+      "proName": "KRAKEN:ETCUSD"
+    },
+    {
+      "description": "",
+      "proName": "POLONIEX:ETCBTC"
+    }
+  ],
+  "locale": "en"
+}</script>
+<!-- TradingView Widget END -->
+</footer>
