@@ -47,10 +47,11 @@
     }
 </style>
 
-
-<h3>Miner Configuration Details</h3>
-<div class="stats">
-    <div><i class="fa fa-cloud"></i> Mining Pool Address: <span id="miningPoolHost"></span></div>
+<div class="row">
+    <h3>Miner Configuration Details</h3>
+    <div class="stats">
+        <div><i class="fa fa-cloud"></i> Mining Pool Address: <span id="miningPoolHost"></span></div>
+    </div>
 </div>
 
 <h4>Mining Ports</h4>
@@ -59,17 +60,6 @@
         <div><i class="fa fa-tachometer"></i> Port: <span class="miningPort"></span></div>
         <div><i class="fa fa-unlock-alt"></i> Starting Difficulty: <span class="miningPortDiff"></span></div>
         <div><i class="fa fa-question"></i> Description: <span class="miningPortDesc"></span></div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        <h3>For <i class="fa fa-windows"></i> Windows users new to mining</h3>
-        <p class="getting_started_windows">
-            You can <a class="btn btn-default btn-sm" target="_blank" id="easyminer_link"><i class="fa fa-download"></i> Download</a>
-            and run <a target="_blank" href="https://github.com/zone117x/cryptonote-easy-miner">cryptonote-easy-miner</a> <i class="fa fa-github"></i>
-            which will automatically generate your wallet address and run CPUMiner with the proper parameters.
-        </p>
     </div>
 </div>
 
@@ -198,7 +188,7 @@
         }
     };
 
-    document.getElementById('easyminer_link').setAttribute('href', easyminerDownload);
+    // document.getElementById('easyminer_link').setAttribute('href', easyminerDownload);
     document.getElementById('miningPoolHost').textContent = poolHost;
 
     var lastPortsJson = '';

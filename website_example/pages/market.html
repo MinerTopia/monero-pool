@@ -6,296 +6,542 @@
 
 <!-- Pool announcements -->
 <div class="row">
-	<div id="siteInfo">
-	    <!-- probably some type of dismissable dialog should go here, but I'd rather not mess with the users just to announce something they dont give a shit about. -->
-	</div>
+    <div id="siteInfo">
+        <!-- probably some type of dismissable dialog should go here, but I'd rather not mess with the users just to announce something they dont give a shit about. -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- TradingView Widget BEGIN -->
+        <span id="tradingview-copyright"><small><a ref="nofollow" target="_blank" href="http://www.tradingview.com" style="color: rgb(173, 174, 176); font-family: &quot;Trebuchet MS&quot;, Tahoma, Arial, sans-serif; font-size: 13px;">Quotes by <span style="color: #00BEEF">TradingView</span></a></span></small>
+        <script src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js">{
+          "symbols": [
+            {
+              "description": "Monero BTC",
+              "proName": "BITFINEX:XMRBTC"
+            },
+            {
+              "description": "Monero USD",
+              "proName": "BITFINEX:XMRUSD"
+            },
+            {
+              "description": "Bitcoin USD",
+              "proName": "BITSTAMP:BTCUSD"
+            },
+            {
+              "description": "Dogecoin BTC",
+              "proName": "HITBTC:DOGEBTC"
+            }
+          ],
+          "locale": "en",
+          "linkPageTemplate": ""
+        }</script>
+        <!-- TradingView Widget END -->
+    </div>
 </div>
 
 <div class="row">
     <!-- Bitcoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="bitcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- Ethereum -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="ethereum" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- Ripple -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="ripple" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- Litecoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="litecoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- Ethereum Classic -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="ethereum-classic" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- NEM -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="nem" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div> 
 
     <!-- DASH -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="dash" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- IOTA -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="iota" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- Monero -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="monero" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- bitshares -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="bitshares" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- stratis -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="stratis" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- antshares -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="antshares" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- zcash -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="zcash" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- siacoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="siacoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- steem -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="steem" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- waves -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="waves" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- bytecoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="bytecoin-bcn" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- bitconnect -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="bitconnect" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- stellar -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="stellar" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- doge -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="dogecoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- lisk -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="lisk" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- gamecredits -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="gamecredits" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- byteball -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="byteball" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- factom -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="factom" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- komodo -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="komodo" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- decred -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="decred" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- digibyte -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="digibyte" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- nxt -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="nxt" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- bancor -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="bancor" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- pivx -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="pivx" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- syscoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="syscoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- bitcoindark -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="bitcoindark" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- emercoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="emercoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- ubiq -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="ubiq" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- peercoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="peercoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- lykke -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="lykke" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- ark -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="ark" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- leocoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="leocoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- nexus -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="nexus" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- reddcoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="reddcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- asch -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="asch" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- cloakcoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="cloakcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- library-credit -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="library-credit" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- verge -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="verge" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- monacoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="monacoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- bitbay -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="bitbay" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- namecoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="namecoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- counterparty -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="counterparty" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- peerplays -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="peerplays-ppy" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- gulden -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="gulden" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- blackcoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="blackcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- omni -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="omni" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- zcoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="zcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- viacoin -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="viacoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- mysterium -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="mysterium" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- elastic -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="elastic" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
 
     <!-- burst -->
-    <div class="col-md-4 col-sm-6">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="coinmarketcap-currency-widget" data-currency="burst" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
     </div>
+
+    <!-- vertcoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="vertcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- blocknet -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="blocknet" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- earthcoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="earthcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- nav-coin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="nav-coin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- ybcoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="ybcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- luckchain -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="luckchain" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- potcoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="potcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- gridcoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="gridcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- mooncoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="mooncoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- expanse -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="expanse" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- shift -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="shift" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- worldcoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="worldcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- neoscoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="neoscoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- skycoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="skycoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- crown -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="crown" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- e-dinar-coin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="e-dinar-coin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- quark -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="quark" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- iocoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="iocoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- digitalnote -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="digitalnote" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- radium -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="radium" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- novacoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="novacoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- vericoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="vericoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- energycoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="energycoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- sphere -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="sphere" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- dnotes -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="dnotes" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- ion -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="ion" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- bitcoin-plus -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="bitcoin-plus" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- einsteinium -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="einsteinium" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- primecoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="primecoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- salus -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="salus" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- infinitecoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="infinitecoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- feathercoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="feathercoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- voxels -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="voxels" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- lomocoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="lomocoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- mergecoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="mergecoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- bitcrystals -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="bitcrystals" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- cryptonite -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="cryptonite" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- golos -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="golos" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- faircoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="faircoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- firstcoin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="firstcoin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- e-coin -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="e-coin" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- clams -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="clams" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
+    <!-- aeon -->
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="coinmarketcap-currency-widget" data-currency="aeon" data-base="USD" data-secondary="BTC" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+    </div>
+
 </div>
 
     
