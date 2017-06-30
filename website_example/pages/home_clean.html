@@ -78,55 +78,37 @@
 
 </style>
 
-<!-- Pool announcements -->
-<div class="row">
-	<div id="siteInfo">
-	    <!-- probably some type of dismissable dialog should go here, but I'd rather not mess with the users just to announce something they dont give a shit about. -->
-	</div>
+
+<div id="siteInfo">
+    <!-- Description or information about this pool -->
 </div>
 
 <div class="row">
-	<div class="col-sm-4">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">Monero Network</h3>
-			</div>
-				<ul class="list-group">
-					<li class="list-group-item"><div><i class="fa fa-tachometer"></i> Hash Rate: <span id="networkHashrate"></span></div></li>
-			        <li class="list-group-item"><div><i class="fa fa-clock-o"></i> Block Found: <span id="networkLastBlockFound"></span></div></li>
-			        <li class="list-group-item"><div><i class="fa fa-unlock-alt"></i> Difficulty: <span id="networkDifficulty"></span></div></li>
-			        <li class="list-group-item"><div><i class="fa fa-bars"></i> Blockchain Height: <span id="blockchainHeight"></span></div></li>
-			        <li class="list-group-item"><div><i class="fa fa-money"></i> Last Reward: <span id="networkLastReward"></span></div></li>
-			        <li class="list-group-item"><div><i class="fa fa-paw"></i> Last Hash: <a id="lastHash" target="_blank"></a></div></li>
-		        </ul>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">Teracycle Network</h3>
-			</div>
-				<ul class="list-group">
-					<li class="list-group-item"><div><i class="fa fa-tachometer"></i> Hash Rate: <span id="poolHashrate"></span></div></li>
-			        <li class="list-group-item"><div><i class="fa fa-clock-o"></i> Block Found: <span id="poolLastBlockFound"></span></div></li>
-			        <li class="list-group-item"><div><i class="fa fa-users"></i> Connected Miners: <span id="poolMiners"></span></div></li>
-			        <li class="list-group-item"><div><i class="fa fa-gift"></i> Donations: <span id="poolDonations"></span></div></li>
-			        <li class="list-group-item"><div><i class="fa fa-money"></i> Total Pool Fee: <span id="poolFee"></span></div></li>
-			        <li class="list-group-item"><div><i class="fa fa-history"></i> Block Found Every: <span id="blockSolvedTime"></span> (est.)</div></li>
-		        </ul>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				Market
-			</div>
-			<div class="panel-body">
-				<div id="marketHeader"></div>
-		        <div class="marketFooter">Updated: <span id="marketLastUpdated"></span></div>
-	        </div>	
-		</div>
-	</div>
+    <div class="col-sm-4 stats">
+        <h3>Network</h3>
+        <div><i class="fa fa-tachometer"></i> Hash Rate: <span id="networkHashrate"></span></div>
+        <div><i class="fa fa-clock-o"></i> Block Found: <span id="networkLastBlockFound"></span></div>
+        <div><i class="fa fa-unlock-alt"></i> Difficulty: <span id="networkDifficulty"></span></div>
+        <div><i class="fa fa-bars"></i> Blockchain Height: <span id="blockchainHeight"></span></div>
+        <div><i class="fa fa-money"></i> Last Reward: <span id="networkLastReward"></span></div>
+        <div><i class="fa fa-paw"></i> Last Hash: <a id="lastHash" target="_blank"></a></div>
+    </div>
+
+    <div class="col-sm-4 stats">
+        <h3>Our Pool</h3>
+        <div><i class="fa fa-tachometer"></i> Hash Rate: <span id="poolHashrate"></span></div>
+        <div><i class="fa fa-clock-o"></i> Block Found: <span id="poolLastBlockFound"></span></div>
+        <div><i class="fa fa-users"></i> Connected Miners: <span id="poolMiners"></span></div>
+        <div><i class="fa fa-gift"></i> Donations: <span id="poolDonations"></span></div>
+        <div><i class="fa fa-money"></i> Total Pool Fee: <span id="poolFee"></span></div>
+        <div><i class="fa fa-history"></i> Block Found Every: <span id="blockSolvedTime"></span> (est.)</div>
+    </div>
+
+    <div class="col-sm-4 stats">
+        <h3 id="marketHeader">Market</h3>
+        <div class="marketFooter">Updated: <span id="marketLastUpdated"></span></div>
+        <div class="marketFooter">Powered by <a href="https://www.cryptonator.com/">Cryptonator</a></div>
+    </div>
 </div>
 
 <hr>
