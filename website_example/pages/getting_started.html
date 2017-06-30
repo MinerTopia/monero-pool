@@ -48,152 +48,90 @@
 </style>
 
 <div class="row">
-    <h3>Miner Configuration Details</h3>
-    <div class="stats">
-        <div><i class="fa fa-cloud"></i> Mining Pool Address: <span id="miningPoolHost"></span></div>
-    </div>
-</div>
-
-<h4>Mining Ports</h4>
-<div id="miningPorts" class="row">
-    <div class="stats">
-        <div><i class="fa fa-tachometer"></i> Port: <span class="miningPort"></span></div>
-        <div><i class="fa fa-unlock-alt"></i> Starting Difficulty: <span class="miningPortDiff"></span></div>
-        <div><i class="fa fa-question"></i> Description: <span class="miningPortDesc"></span></div>
+    <div class="col-md-12">
+        <p class="lead">Pool Configuration Details</p>
+        <p>This quick guide will get you up and mining in about 10 minutes- all you need is time and patience.</p>
+        <div class="stats">
+            <div><i class="fa fa-cloud"></i> Mining Pool Address: <span>teracycle.net</span></div>
+        </div>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-md-12">
-        <h3>Wallet & Daemon Software</h3>
-        <p>
-            <ul>
-                <li><a target="_blank" href="http://monero.cc/getting-started/">Getting started with Monero</a></li>
-                <li>Monero information and news on its <a href="https://bitcointalk.org/index.php?topic=583449.0">BitcoinTalk announcement thread</a></li>
-            </ul>
-        </p>
+    <div class="col-sm-4">
+        <div class="stats">
+            <div><i class="fa fa-tachometer"></i> Port: <span>3333</span></div>
+            <div><i class="fa fa-unlock-alt"></i> Starting Difficulty: <span>100</span></div>
+            <div><i class="fa fa-question"></i> Description: <span>Low End Hardware</span></div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="stats">
+            <div><i class="fa fa-tachometer"></i> Port: <span>5555</span></div>
+            <div><i class="fa fa-unlock-alt"></i> Starting Difficulty: <span>5000</span></div>
+            <div><i class="fa fa-question"></i> Description: <span>Mid-Level Hardware</span></div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="stats">
+            <div><i class="fa fa-tachometer"></i> Port: <span>7777</span></div>
+            <div><i class="fa fa-unlock-alt"></i> Starting Difficulty: <span>10000</span></div>
+            <div><i class="fa fa-question"></i> Description: <span>High-End Hardware</span></div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-3 inverse"><strong>STEP 1. </strong><br>Creating A Wallet</div>
+    <div class="col-md-9"><p class="lead">There are two types of wallets you can use- hosted wallets and local wallets.</p>
+    <p>The best option is to use the default wallet software, and give it time to sync the entire blockchain to your computer. The plus side to this is that you'll be the only person holding the keys, and it is by far the most secure way to start a wallet. Hosted wallets don't have to stay in sync, but they also don't have the benefit of a single-keyholder being in charge of the wallets. A hosted wallet is significantly more likely to be stolen than a local wallet.</p>
+    <p>
+        <a href="https://getmonero.org/2017/03/29/monero-gui-beta-2-released.html" class="btn btn-default">Create Local Wallet</a>
+        <a href="https://mymonero.com/#/create-your-account" class="btn btn-default">Create Hosted Wallet</a>
+    </p>
+    </div>
+</div>
+<br><br>
+
+<div class="row">
+    <div class="col-md-3 inverse"><strong>STEP 2. </strong><br>Address & Password</div>
+    <div class="col-md-9"><p class="lead">Write down everything!</p>
+    <p>When creating your wallet, you'll be given a 25 word mnemonic seed. <strong>Write the seed down somewhere private!</strong></p> 
+    <p>This seed can be used to re-generate your wallet if your computer gets blown up or tossed in a campfire or dropped in a tub with a screaming child. Keep your password and seed safe, and if you decide to encrypt your wallet, use a secure password like http://probablyagoodpassword.com</p>
+    </div>
+</div>
+<br><br>
+
+<div class="row">
+    <div class="col-md-3 inverse"><strong>STEP 3. </strong><br>CPU vs GPU Mining</div>
+    <div class="col-md-9"><p class="lead">There are two ways to mine</p>
+    <p>Monero can be mined with the CPU or GPU of most computers. The easiest way to mine is to download a miner that uses the CPU. CPU miners require less configuration and attention to detail, with a drawback of mining slower than GPU. Any mid-level gaming computer available today probably has adequate power to mine with the GPU, which is significantly faster, but harder to fine tune and keep cool.</p>
+    <p>
+        <a href="https://github.com/fireice-uk/xmr-stak-cpu/releases/tag/v1.2.0-1.4.1" class="btn btn-default">XMR-Stak CPU Miner [Intel/AMD]</a>
+        <a href="https://github.com/fireice-uk/xmr-stak-nvidia" class="btn btn-default">XMR-Stak GPU Miner [Nvidia]</a>
+        <a href="https://bitcointalk.org/index.php?topic=638915.0" class="btn btn-default">Claymore GPU Miner [AMD]</a>
+    </p>
+    </div>
+</div>
+<br><br>
+
+<div class="row">
+    <div class="col-md-3 inverse"><strong>STEP 4. </strong><br>Start Mining</div>
+    <div class="col-md-9"><p class="lead">This is the part where you get lost and frustrated.</p>
+    <p>Every miner does roughly the same thing, and for the most part, they're all configured the same way. Pay attention, and don't be afraid to mess anything up. You're not going to cause problems if you type something wrong.</p>
+
+    
+    <p><a href="#">XMR-STAK-CPU</p></a>
+    <div class="well well-sm">...</div>
+    <p><a href="#">XMR-STAK-NVIDIA</p></a>
+    <div class="well well-sm">...</div>
+    <p><a href="#">CLAYMORE</p></a>
+    <div class="well well-sm">...</div>
     </div>
 </div>
 
 
-<h3>Mining Apps</h3>
-<div class="yourStats table-responsive">
-    <table class="table">
-        <thead>
-        <tr>
-            <th><i class="fa fa-book"></i> App Name</th>
-            <th><i class="fa fa-car"></i> Architecture</th>
-            <th><i class="fa fa-download"></i> Downloads</th>
-            <th><i class="fa fa-comments"></i> Discussion</th>
-            <th><i class="fa fa-file-code-o"></i> Source Code</th>
-        </tr>
-        </thead>
-        <tbody id="mining_apps">
-        <tr>
-            <td class="miningAppTitle">CPUMiner (forked by LucasJones & Wolf)</td>
-            <td>CPU</td>
-            <td><a target="_blank" href="https://bitcointalk.org/index.php?topic=632724">BitcoinTalk</a></td>
-            <td><a target="_blank" href="https://bitcointalk.org/index.php?topic=632724">BitcoinTalk</a></td>
-            <td><a target="_blank" href="https://github.com/wolf9466/cpuminer-multi">Github</a></td>
-        </tr>
-        <tr>
-            <td colspan="5">
-                <span>Example:</span>
-                <code>minerd -a cryptonight -o stratum+tcp://<span class="exampleHost"></span>:<span class="examplePort"></span> -u <span class="exampleAddress">YOUR_WALLET_ADDRESS</span> -p x</code>
-            </td>
-        </tr>
-        <tr>
-            <td class="miningAppTitle">YAM Miner (by yvg1900)</td>
-            <td>CPU</td>
-            <td><a target="_blank" href="https://mega.co.nz/#F!UlkU0RyR!E8n4CFkqVu0WoOnsJnQkSg">MEGA</a></td>
-            <td><a target="_blank" href="https://twitter.com/yvg1900">Twitter</a></td>
-            <td>Proprietary <i class="fa fa-frown-o"></i></td>
-        </tr>
-        <tr>
-            <td colspan="5">
-                <span>Example:</span>
-                <code>yam -c x -M stratum+tcp://<span class="exampleAddress">YOUR_WALLET_ADDRESS</span>:x@<span class="exampleHost"></span>:<span class="examplePort"></span>/xmr</code>
-            </td>
-        </tr>
-        <tr>
-            <td class="miningAppTitle">Claymore CPU Miner</td>
-            <td>CPU</td>
-            <td><a target="_blank" href="https://bitcointalk.org/index.php?topic=647251.0">BitcoinTalk</a></td>
-            <td><a target="_blank" href="https://bitcointalk.org/index.php?topic=647251.0">BitcoinTalk</a></td>
-            <td>Proprietary <i class="fa fa-frown-o"></i></td>
-        </tr>
-        <tr>
-            <td colspan="5">
-                <span>Example:</span>
-                <code>NsCpuCNMiner64 -o stratum+tcp://<span class="exampleHost"></span>:<span class="examplePort"></span> -u <span class="exampleAddress">YOUR_WALLET_ADDRESS</span> -p x</code>
-            </td>
-        </tr>
-        <tr>
-            <td class="miningAppTitle">Claymore GPU Miner</td>
-            <td>OpenCL (AMD)</td>
-            <td><a target="_blank" href="https://bitcointalk.org/index.php?topic=638915.0">BitcoinTalk</a></td>
-            <td><a target="_blank" href="https://bitcointalk.org/index.php?topic=638915.0">Discussion</a></td>
-            <td>Proprietary <i class="fa fa-frown-o"></i></td>
-        </tr>
-        <tr>
-            <td colspan="5">
-                <span>Example:</span>
-                <code>NsGpuCNMiner -o stratum+tcp://<span class="exampleHost"></span>:<span class="examplePort"></span> -u <span class="exampleAddress">YOUR_WALLET_ADDRESS</span> -p x</code>
-            </td>
-        </tr>
-        <tr>
-            <td class="miningAppTitle">ccminer (forked by tsiv)</td>
-            <td>CUDA (Nvidia)</td>
-            <td><a target="_blank" href="https://github.com/tsiv/ccminer-cryptonight/releases">Github</a></td>
-            <td><a target="_blank" href="https://bitcointalk.org/index.php?topic=656841.msg7487737#msg7487737">BitcoinTalk</a></td>
-            <td><a target="_blank" href="https://github.com/tsiv/ccminer-cryptonight">Github</a></td>
-        </tr>
-        <tr>
-            <td colspan="5">
-                <span>Example:</span>
-                <code>ccminer -o stratum+tcp://<span class="exampleHost"></span>:<span class="examplePort"></span> -u <span class="exampleAddress">YOUR_WALLET_ADDRESS</span> -p x</code>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
 
 
-<script>
-
-    currentPage = {
-        destroy: function(){
-
-        },
-        update: function(){
-
-            var portsJson = JSON.stringify(lastStats.config.ports);
-            if (lastPortsJson !== portsJson) {
-                lastPortsJson = portsJson;
-                var $miningPortChildren = [];
-                for (var i = 0; i < lastStats.config.ports.length; i++) {
-                    var portData = lastStats.config.ports[i];
-                    var $portChild = $(miningPortTemplate);
-                    $portChild.find('.miningPort').text(portData.port);
-                    $portChild.find('.miningPortDiff').text(portData.difficulty);
-                    $portChild.find('.miningPortDesc').text(portData.desc);
-                    $miningPortChildren.push($portChild);
-                }
-                $miningPorts.empty().append($miningPortChildren);
-            }
-
-            updateTextClasses('exampleHost', poolHost);
-            updateTextClasses('examplePort', lastStats.config.ports[0].port.toString());
-
-        }
-    };
-
-    // document.getElementById('easyminer_link').setAttribute('href', easyminerDownload);
-    document.getElementById('miningPoolHost').textContent = poolHost;
-
-    var lastPortsJson = '';
-    var $miningPorts = $('#miningPorts');
-    var miningPortTemplate = $miningPorts.html();
-    $miningPorts.empty();
-
-</script>
