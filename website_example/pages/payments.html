@@ -19,44 +19,70 @@
 
 <div class="row">
 	<div class="col-md-6">
-	<p class="lead"><strong>Payment Statistics</strong></p>
-		<div class="paymentsStatHolder">
-		    <span><strong>Total Payments: </strong><span id="paymentsTotal"></span></span>
-		    <span><strong>Total Miners Paid: </strong><span id="paymentsTotalPaid"></span></span><br>
-		    <span><strong>Minimum Payment Threshold: </strong><span id="paymentsMinimum"></span></span>
-		    <span><strong>Denomination Unit: </strong><span id="paymentsDenomination"></span></span>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Payment Statistics</h3>
+		  </div>
+		  <div class="panel-body">
+		    <div class="paymentsStatHolder">
+		    	<ul class="list-group">
+				    <li class="list-group-item"><span><strong>Total Payments: </strong><span id="paymentsTotal"></span></span></li>
+				    <li class="list-group-item"><span><strong>Total Miners Paid: </strong><span id="paymentsTotalPaid"></span></span></li>
+				    <li class="list-group-item"><span><strong>Minimum Payment Threshold: </strong><span id="paymentsMinimum"></span></span></li>
+				    <li class="list-group-item"><span><strong>Denomination Unit: </strong><span id="paymentsDenomination"></span></span></li>
+				</ul>
+			</div>
+		  </div>
 		</div>
 	</div>
+
 	<div class="col-md-6">
-		<div class="paymentsStatHolder">
-		    <p class="lead"><strong>Payment Schedule</strong></p>
-			<p>Unpaid balances that have passed the <Strong>Minimum Payout Threshold</Strong> are paid once per day, to minimize fees.</p>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Payment Schedule</h3>
+		  </div>
+		  <div class="panel-body">
+		    <div class="paymentsStatHolder">
+		    	<ul class="list-group">
+					<li class="list-group-item">
+						<p>Unpaid balances that have passed the <Strong>Minimum Payout Threshold</Strong> are paid once per day, to minimize fees for the miners as well as the pool.</p>
+					</li>
+				</ul>
+			</div>
+		  </div>
 		</div>
+	</div>
+
+</div>
+
+
+<div class="panel panel-default">
+	<div class="panel-heading">Panel heading</div>
+
+	<div class="table-responsive">
+	    <table class="table table-hover table-striped">
+	        <thead>
+	        <tr>
+	            <th><i class="fa fa-clock-o"></i> Time Sent</th>
+	            <th><i class="fa fa-paw"></i> Transaction Hash</th>
+	            <th><i class="fa fa-money"></i> Amount</th>
+	            <th><i class="fa fa-tag"></i> Fee</th>
+	            <th><i class="fa fa-sitemap"></i> Mixin</th>
+	            <th><i class="fa fa-group"></i> Payees</th>
+	        </tr>
+	        </thead>
+	        <tbody id="payments_rows">
+
+	        </tbody>
+	    </table>
 	</div>
 </div>
 
-<hr> 
-
+<!-- 
 <div class="row">
 	<div class="col-md-12">
-		<h1>Historical Payments</h1>
-			<div class="table-responsive">
-			    <table class="table table-hover table-striped">
-			        <thead>
-			        <tr>
-			            <th><i class="fa fa-clock-o"></i> Time Sent</th>
-			            <th><i class="fa fa-paw"></i> Transaction Hash</th>
-			            <th><i class="fa fa-money"></i> Amount</th>
-			            <th><i class="fa fa-tag"></i> Fee</th>
-			            <th><i class="fa fa-sitemap"></i> Mixin</th>
-			            <th><i class="fa fa-group"></i> Payees</th>
-			        </tr>
-			        </thead>
-			        <tbody id="payments_rows">
-
-			        </tbody>
-			    </table>
-			</div>
+		<p class="lead"><strong>Historical Payment History</strong></p>
+			
 	</div>
 	<div class="col-md-12">
 					<p class="text-center">
@@ -65,7 +91,7 @@
 	</div>
 </div>
 
-
+ -->
 <script>
     currentPage = {
         destroy: function(){
