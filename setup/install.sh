@@ -35,6 +35,9 @@ a2dissite 000-default.conf
 service apache2 reload
 a2ensite 000-default.conf
 service apache2 reload
+
+# start tmux session with daemon inside juuuust in case
+tmux new -s monero-daemon
 cd ~
 sudo git clone https://github.com/monero-project/monero.git
 cd monero
@@ -50,6 +53,12 @@ sudo -u monerodaemon rm -rf $BLOCKCHAIN_DOWNLOAD_DIR
 sudo systemctl daemon-reload
 sudo systemctl enable monero
 sudo systemctl start monero
+tmux detach
+# end tmux monero-daemon session
+
+
+# start tmux session with frontend + api inside
+tmux new -s monero-daemon
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 source ~/.nvm/nvm.sh
 nvm install v0.10
@@ -58,3 +67,4 @@ npm update
 npm install -g forever
 sudo systemctl daemon-reload
 forever init.js
+#end tmux session with frontend + api
