@@ -19,7 +19,11 @@ echo "============================================================="
 if [ "$EUID" = 0 ]
   then 
     echo "You shouldn't run this setup as root."
-    echo "Create a non-root user with sudo privileges"
+    echo "Press [CTRL+C] now to exit, or I'll make a user for you in 15 seconds."
+    sleep 15
+    echo "Creating a non-root user with sudo privileges"
+    useradd -m poolboy
+    adduser poolboy sudo www-data
   exit
 fi
 
