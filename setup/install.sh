@@ -13,11 +13,13 @@ echo "==  ===  =====  ========    ==  ========  ==  =====  ==  ===="
 echo "==  ===  =  ==  =======  =  ==  =  ==  =  ==  =  ==  ==  =  ="
 echo "==   ===   ===  ========    ===   ====   ====   ===  ===   =="
 echo "============================================================="
-echo "==============================================v0.9.01========"
+echo "============================================================="
 
 # make sure user isn't root
 if [ "$EUID" = 0 ]
-  then echo "Please do not run as root"
+  then 
+    echo "You shouldn't run this setup as root."
+    echo "Create a non-root user with sudo privileges"
   exit
 fi
 
