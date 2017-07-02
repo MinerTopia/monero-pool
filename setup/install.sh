@@ -3,7 +3,7 @@
 
 
 # set up our colors
-DEFAULT='\033[0m' # default color
+NC='\033[0m' # No Color
 PURPLE='\e[0;35m'
 LPURP='\e[1;35m'
 WHITE='\e[1;37m'
