@@ -70,7 +70,7 @@ you are using - a good place to start with redis is [data persistence](http://re
 
 You can use the install script to set up everything automatically, or you can open the script and run through the code step by step.
 ```bash
-curl -sL http://github.com/teracycle/teracycle-pool/setup/install.sh | bash
+curl -sL https://raw.githubusercontent.com/Teracycle/teracycle-pool/master/setup/install.sh | bash
 ```
 
 #### 2) Configuration
