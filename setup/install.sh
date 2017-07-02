@@ -21,6 +21,7 @@ if [ "$EUID" = 0 ]
   exit
 fi
 
+# load dependencies
 sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt upgrade
 sudo DEBIAN_FRONTEND=noninteractive apt -y install git curl tmux htop gcc build-essential cmake pkg-config libboost-all-dev redis-server libevent-dev libunbound-dev libminiupnpc-dev libunwind8-dev liblzma-dev libldns-dev libexpat1-dev libgtest-dev lmdb-utils libzmq3-dev graphviz doxygen libssl-dev
@@ -35,9 +36,10 @@ a2dissite 000-default.conf
 service apache2 reload
 a2ensite 000-default.conf
 service apache2 reload
+redis-server --daemonize yes
+ps aux | grep redis-server
 
-# start tmux session with daemon inside juuuust in case
-tmux new -s monero-daemon
+# monero daemon
 cd ~
 sudo git clone https://github.com/monero-project/monero.git
 cd monero
@@ -53,12 +55,8 @@ sudo -u monerodaemon rm -rf $BLOCKCHAIN_DOWNLOAD_DIR
 sudo systemctl daemon-reload
 sudo systemctl enable monero
 sudo systemctl start monero
-tmux detach
-# end tmux monero-daemon session
 
-
-# start tmux session with frontend + api inside
-tmux new -s monero-daemon
+# start API
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 source ~/.nvm/nvm.sh
 nvm install v0.10
