@@ -18,8 +18,8 @@ if [ "$EUID" = 0 ]
 fi
 CURUSER=$(whoami)
 sudo apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install git curl ntp build-essential screen cmake pkg-config libboost-all-dev redis-server libevent-dev libunbound-dev libminiupnpc-dev libunwind8-dev liblzma-dev libldns-dev libexpat1-dev libgtest-dev lmdb-utils libzmq3-dev libssl-dev
+sudo DEBIAN_FRONTEND=noninteractive apt update && apt -y upgrade
+sudo DEBIAN_FRONTEND=noninteractive apt -y install git curl ntp build-essential screen cmake pkg-config libboost-all-dev redis-server libevent-dev libunbound-dev libminiupnpc-dev libunwind8-dev liblzma-dev libldns-dev libexpat1-dev libgtest-dev lmdb-utils libzmq3-dev libssl-dev
 cd ~
 git clone https://github.com/teracycle/teracycle-pool.git 
 echo "[compiling and installing monero]"
