@@ -26,12 +26,12 @@ echo -e "${PURPLE}=================================================${LPURP}v.0.9
 # make sure user isn't root
 if [ "$EUID" = 0 ]
   then 
-    ${RED}
-    echo "You shouldn't run this setup as root."
-    ${DEFAULT}
-    echo "Press [CTRL+C] now to exit, or I'll make a user for you in 15 seconds."
+    
+    echo -e "${RED}You shouldn't run this setup as root."
+    
+    echo -e "${DEFAULT}Press ${WHITE}[CTRL+C]${DEFAULT} now to exit, or I'll make a user for you in 15 seconds."
     sleep 15
-    echo "Creating a non-root user with sudo privileges"
+    echo -e "${WHITE}Creating a non-root user with sudo privileges${DEFAULT}"
     useradd -m poolboy
     adduser poolboy sudo
     adduser poolboy www-data
