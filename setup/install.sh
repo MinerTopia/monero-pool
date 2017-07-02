@@ -21,7 +21,7 @@ echo -e "${PURPLE}==  ===  =====  ========    ==  ========  ==  =====  ==  ===="
 echo -e "${PURPLE}==  ===  =  ==  =======  =  ==  =  ==  =  ==  =  ==  ==  =  ="
 echo -e "${PURPLE}==   ===   ===  ========    ===   ====   ====   ===  ===   =="
 echo -e "${PURPLE}============================================================="
-echo -e "${PURPLE}=================================================${LPURP}v.0.9.01${PURPLE}====${DEFAULT}"
+echo -e "${PURPLE}=================================================${LPURP}v.0.9.01${PURPLE}====${NC}"
 
 # make sure user isn't root
 if [ "$EUID" = 0 ]
@@ -29,9 +29,9 @@ if [ "$EUID" = 0 ]
     
     echo -e "${RED}You shouldn't run this setup as root."
     
-    echo -e "${DEFAULT}Press ${WHITE}[CTRL+C]${DEFAULT} now to exit, or I'll make a user for you in 15 seconds."
+    echo -e "${NC}Press ${WHITE}[CTRL+C]${NC} now to exit, or I'll make a user for you in 15 seconds."
     sleep 15
-    echo -e "${WHITE}Creating a non-root user with sudo privileges${DEFAULT}"
+    echo -e "${WHITE}Creating a non-root user with sudo privileges${NC}"
     useradd -m poolboy
     adduser poolboy sudo
     adduser poolboy www-data
