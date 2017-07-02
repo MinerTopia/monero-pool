@@ -3,7 +3,8 @@
 
 
 # set up our colors
-NC='\e[1;30m' # No Color
+NC='\e[0;37m' # No Color
+RED='\e[0;31m'
 PURPLE='\e[0;35m'
 LPURP='\e[1;35m'
 WHITE='\e[1;37m'
