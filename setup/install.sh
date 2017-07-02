@@ -3,7 +3,7 @@
 
 
 # set up our colors
-DEFAULT='\e[0m' # default color
+DEFAULT='\033[0m' # default color
 PURPLE='\e[0;35m'
 LPURP='\e[1;35m'
 WHITE='\e[1;37m'
@@ -21,7 +21,7 @@ echo -e "${PURPLE}==  ===  =====  ========    ==  ========  ==  =====  ==  ===="
 echo -e "${PURPLE}==  ===  =  ==  =======  =  ==  =  ==  =  ==  =  ==  ==  =  ="
 echo -e "${PURPLE}==   ===   ===  ========    ===   ====   ====   ===  ===   =="
 echo -e "${PURPLE}============================================================="
-echo -e "${PURPLE}=================================================${LPURP}v.0.9.01${PURPLE}===="
+echo -e "${PURPLE}=================================================${LPURP}v.0.9.01${PURPLE}====${DEFAULT}"
 
 # make sure user isn't root
 if [ "$EUID" = 0 ]
