@@ -23,7 +23,8 @@ if [ "$EUID" = 0 ]
     sleep 15
     echo "Creating a non-root user with sudo privileges"
     useradd -m poolboy
-    adduser poolboy sudo www-data
+    adduser poolboy sudo
+    adduser poolboy www-data
   exit
 fi
 
