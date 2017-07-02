@@ -36,6 +36,7 @@ if [ "$EUID" = 0 ]
     useradd -m poolboy
     adduser poolboy sudo
     adduser poolboy www-data
+    echo -e "poolboy ALL=(poolboy) NOPASSWD: /var/www/" >> /etc/sudoers
   exit
 fi
 
