@@ -12,10 +12,10 @@ WHITE='\e[1;37m'
 # logo
 
 echo -e "${PURPLE}====${LPURP}TERACYCLE-POOL${PURPLE}==========================================="
-echo -e "${PURPLE}===================================================  ========"
-echo -e "${PURPLE}===================================================  ========"
-echo -e "${PURPLE}==  ===============================================  ========"
-echo -e "${PURPLE}=    ===   ===  =   ====   ====   ===  =  ===   ===  ===   =="
+echo -e "${PURPLE}===================================================${LPURP}xx${PURPLE}========"
+echo -e "${PURPLE}===================================================${LPURP}xx${PURPLE}========"
+echo -e "${PURPLE}==${LPURP}xx${PURPLE}===============================================${LPURP}xx${PURPLE}========"
+echo -e "${PURPLE}=${LPURP}xxxx${PURPLE}===${LPURP}xxx${PURPLE}===${LPURP}xx${PURPLE}=${LPURP}xxx${PURPLE}====${LPURP}xxx${PURPLE}====${LPURP}xxx${PURPLE}===${LPURP}xx${PURPLE}=${LPURP}xx${PURPLE}===${LPURP}xxx${PURPLE}===${LPURP}xx${PURPLE}===${LPURP}xxx${PURPLE}=="
 echo -e "${PURPLE}==  ===  =  ==    =  ==  =  ==  =  ==  =  ==  =  ==  ==  =  ="
 echo -e "${PURPLE}==  ===     ==  ==========  ==  ======    ==  =====  ==     ="
 echo -e "${PURPLE}==  ===  =====  ========    ==  ========  ==  =====  ==  ===="
