@@ -1,8 +1,18 @@
 #!/usr/bin/env bash
 # always use the proper shebang
 
+
+# set up our colors
+DEFAULT='\033[0m' # RESET COLOR
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+PURPLE='\033[0;35m'
+LIGHTPURPLE='\033[1;35m'
+WHITE='\033[1;37m'
+
 # logo
-echo "============================================================="
+${PURPLE}
+echo "====${LIGHTPURPLE}TERACYCLE-POOL${PURPLE}==========================================="
 echo "===================================================  ========"
 echo "===================================================  ========"
 echo "==  ===============================================  ========"
@@ -13,12 +23,14 @@ echo "==  ===  =====  ========    ==  ========  ==  =====  ==  ===="
 echo "==  ===  =  ==  =======  =  ==  =  ==  =  ==  =  ==  ==  =  ="
 echo "==   ===   ===  ========    ===   ====   ====   ===  ===   =="
 echo "============================================================="
-echo "============================================================="
+echo "=================================================${LIGHTPURPLE}v.0.9.01${PURPLE}===="
 
 # make sure user isn't root
 if [ "$EUID" = 0 ]
   then 
+    ${RED}
     echo "You shouldn't run this setup as root."
+    ${DEFAULT}
     echo "Press [CTRL+C] now to exit, or I'll make a user for you in 15 seconds."
     sleep 15
     echo "Creating a non-root user with sudo privileges"
