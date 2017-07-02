@@ -98,7 +98,7 @@
         "port": 8117,
         "blocks": 30,
         "payments": 30,
-        "password": "Password898989"
+        
     },
 
     "daemon": {
