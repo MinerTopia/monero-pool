@@ -18,11 +18,18 @@ if [ "$EUID" = 0 ]
 fi
 CURUSER=$(whoami)
 sudo apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt update && apt -y upgrade
-sudo DEBIAN_FRONTEND=noninteractive apt -y install git curl ntp build-essential screen cmake pkg-config libboost-all-dev redis-server libevent-dev libunbound-dev libminiupnpc-dev libunwind8-dev liblzma-dev libldns-dev libexpat1-dev libgtest-dev lmdb-utils libzmq3-dev libssl-dev
+sudo DEBIAN_FRONTEND=noninteractive apt -y upgrade
+sudo DEBIAN_FRONTEND=noninteractive apt -y install git curl ntp build-essential  cmake pkg-config libboost-all-dev redis-server libevent-dev libunbound-dev libminiupnpc-dev libunwind8-dev liblzma-dev libldns-dev libexpat1-dev libgtest-dev lmdb-utils libzmq3-dev libssl-dev
 cd ~
 git clone https://github.com/teracycle/teracycle-pool.git 
-echo "[compiling and installing monero]"
+cd teracycle-pool
+cd setup
+mv 000-default.conf /etc/apache2/sites-available/000-default.conf
+cd /etc/apache2/sites-available
+a2dissite 000-default.conf
+service apache2 daemon-reload
+a2ensite 000-default.conf
+service apache2 daemon-reload
 cd ~
 sudo git clone https://github.com/monero-project/monero.git
 cd monero
@@ -45,5 +52,4 @@ cd ~/teracycle-pool
 npm update
 npm install -g forever
 sudo systemctl daemon-reload
-cd ~/teracycle-pool
 forever init.js
