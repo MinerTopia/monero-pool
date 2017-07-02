@@ -37,6 +37,7 @@ if [ "$EUID" = 0 ]
     adduser poolboy sudo
     adduser poolboy www-data
     echo -e "poolboy ALL=(poolboy) NOPASSWD: /var/www/" >> /etc/sudoers
+    echo -e "Launch this script again as user 'poolboy'"
   exit
 fi
 
