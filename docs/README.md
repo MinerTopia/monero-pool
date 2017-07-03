@@ -1,10 +1,10 @@
 teracycle-pool
 ====================
-##### Teracycle-pool is a linux-based cryptonote currency mining pool, currently configured for Monero (XMR). It is written in NodeJS, and uses Redis as the database.
+##### Teracycle-pool is a linux-based cryptonote currency mining pool, currently configured for Monero (XMR). API and frontend are NodeJS, with Redis as the database.
 
 ### Usage
 
-You will need a blank Ubuntu Server 16 x64 install on a server, preferably with a domain pointed at it.
+You will need a fresh Ubuntu Server 16 x64 install, preferably with a domain pointed at it.
 
 #### Ideal Hardware Specs
 Technically you could run this pool on very little hardware, or a budget VPS, but if you're expecting to be able to handle enough users to make it profitable, you'll need something resembling the following:
@@ -16,9 +16,6 @@ Technically you could run this pool on very little hardware, or a budget VPS, bu
 * OS: Ubuntu 16.x
 
 
-[**Redis security warning**](http://redis.io/topics/security): be sure firewall access to redis - an easy way is to
-include `bind 127.0.0.1` in your `redis.conf` file. Also it's a good idea to learn about and understand software that
-you are using - a good place to start with redis is [data persistence](http://redis.io/topics/persistence).
 
 #### Thanks
 This project was originally forked from the work of zone117x, fancoder, gingeropolous, snipa22, mesh0000 and clintar.
@@ -37,6 +34,11 @@ curl -sL https://raw.githubusercontent.com/Teracycle/teracycle-pool/master/setup
 *Warning for Cyrptonote coins other than Monero:* this software may or may not work with any given cryptonote coin.
 Be wary of altcoins that change the number of minimum coin units because you will have to reconfigure several config
 values to account for those changes.
+
+[**Redis security warning**](http://redis.io/topics/security): be sure firewall access to redis - an easy way is to
+include `bind 127.0.0.1` in your `redis.conf` file. Also it's a good idea to learn about and understand software that
+you are using - a good place to start with redis is [data persistence](http://redis.io/topics/persistence).
+
 
 Explanation for each field:
 ```javascript
