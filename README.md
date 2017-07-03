@@ -1,12 +1,10 @@
 teracycle-pool
 ====================
+Teracycle-pool is a linux-based cryptonote currency mining pool, currently configured for Monero (XMR). It is written in NodeJS, and uses Redis as the database. This project was originally forked from the work of zone117x, fancoder, gingeropolous 
 
 
+#### Usage
 
-Usage
-===
-
-#### Requirements
 You will need a blank Ubuntu Server 16 x64 install on a server, preferably with a domain pointed at it. 
 
 #### Ideal Hardware Specs
