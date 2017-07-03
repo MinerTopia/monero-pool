@@ -2,48 +2,6 @@ teracycle-pool
 ====================
 
 
-#### Features
-
-* TCP (stratum-like) protocol for server-push based jobs
-  * Compared to old HTTP protocol, this has a higher hash rate, lower network/CPU server load, lower orphan
-    block percent, and less error prone
-* IP banning to prevent low-diff share attacks
-* Socket flooding detection
-* Payment processing
-  * Splintered transactions to deal with max transaction size
-  * Minimum payment threshold before balance will be paid out
-  * Minimum denomination for truncating payment amount precision to reduce size/complexity of block transactions
-* Detailed logging
-* Ability to configure multiple ports - each with their own difficulty
-* Variable difficulty / share limiter
-* Share trust algorithm to reduce share validation hashing CPU load
-* Clustering for vertical scaling
-* Modular components for horizontal scaling (pool server, database, stats/API, payment processing, front-end)
-* Live stats API (using AJAX long polling with CORS)
-  * Currency network/block difficulty
-  * Current block height
-  * Network hashrate
-  * Pool hashrate
-  * Each miners' individual stats (hashrate, shares submitted, pending balance, total paid, etc)
-  * Blocks found (pending, confirmed, and orphaned)
-* An easily extendable, responsive, light-weight front-end using API to display data
-* Worker login validation (make sure miners are using proper wallet addresses for mining)
-
-
-### Community / Support
-
-* [CryptoNote Forum](https://forum.cryptonote.org/)
-* [Monero Github](https://github.com/monero-project/bitmonero)
-* [Monero Announcement Thread](https://bitcointalk.org/index.php?topic=583449.0)
-* IRC (freenode)
-  * Support / general discussion join #monero: https://webchat.freenode.net/?channels=#monero
-  * Development discussion join #monero-dev: https://webchat.freenode.net/?channels=#monero-dev
-
-
-#### Pools Using This Software
-
-* http://teracycle.net
-
 
 Usage
 ===
@@ -55,9 +13,13 @@ You will need a blank Ubuntu Server 16 x64 install on a server, preferably with 
 Technically you could run this pool on very little hardware, or a budget VPS, but if you're expecting to be able to handle enough users to make it profitable, you'll need something resembling the following:
 
 CPU: 4 cores 
+
 RAM: 8GB
+
 HD: 60GB SSD
+
 Net: 200mMbit/s
+
 OS: Ubuntu 16.x
 
 
@@ -166,6 +128,50 @@ Curl can be used to use the JSON-RPC commands from command-line. Here is an exam
 ```bash
 curl 127.0.0.1:18081/json_rpc -d '{"method":"getblockheaderbyheight","params":{"height":100}}'
 ```
+
+#### Features
+
+* TCP (stratum-like) protocol for server-push based jobs
+  * Compared to old HTTP protocol, this has a higher hash rate, lower network/CPU server load, lower orphan
+    block percent, and less error prone
+* IP banning to prevent low-diff share attacks
+* Socket flooding detection
+* Payment processing
+  * Splintered transactions to deal with max transaction size
+  * Minimum payment threshold before balance will be paid out
+  * Minimum denomination for truncating payment amount precision to reduce size/complexity of block transactions
+* Detailed logging
+* Ability to configure multiple ports - each with their own difficulty
+* Variable difficulty / share limiter
+* Share trust algorithm to reduce share validation hashing CPU load
+* Clustering for vertical scaling
+* Modular components for horizontal scaling (pool server, database, stats/API, payment processing, front-end)
+* Live stats API (using AJAX long polling with CORS)
+  * Currency network/block difficulty
+  * Current block height
+  * Network hashrate
+  * Pool hashrate
+  * Each miners' individual stats (hashrate, shares submitted, pending balance, total paid, etc)
+  * Blocks found (pending, confirmed, and orphaned)
+* An easily extendable, responsive, light-weight front-end using API to display data
+* Worker login validation (make sure miners are using proper wallet addresses for mining)
+
+
+### Community / Support
+
+* [CryptoNote Forum](https://forum.cryptonote.org/)
+* [Monero Github](https://github.com/monero-project/bitmonero)
+* [Monero Announcement Thread](https://bitcointalk.org/index.php?topic=583449.0)
+* IRC (freenode)
+  * Support / general discussion join #monero: https://webchat.freenode.net/?channels=#monero
+  * Development discussion join #monero-dev: https://webchat.freenode.net/?channels=#monero-dev
+
+
+#### Pools Using This Software
+
+* http://teracycle.net
+
+
 
 Donations
 ---------
