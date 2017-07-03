@@ -31,7 +31,7 @@ You can use the install script to set up the api, database and frontend automati
 curl -sL https://raw.githubusercontent.com/Teracycle/teracycle-pool/master/setup/install.sh | bash
 ```
 
-#### 2) Configuration
+#### Configuration
 
 
 *Warning for Cyrptonote coins other than Monero:* this software may or may not work with any given cryptonote coin.
@@ -160,8 +160,6 @@ Explanation for each field:
     }
 }
 ```
-
-
 The file `config.json` is used by default but a file can be specified using the `-config=file` command argument, for example:
 
 ```bash
@@ -242,7 +240,14 @@ Curl can be used to use the JSON-RPC commands from command-line. Here is an exam
 curl 127.0.0.1:18081/json_rpc -d '{"method":"getblockheaderbyheight","params":{"height":100}}'
 ```
 
-#### Features
+#### Feature Roadmap
+**This progress is tracked via Trello publicly at:
+https://trello.com/b/PsqX8itf/teracycle-pool**
+
+- **[done]** automatic install script for ubuntu 16.x
+- **[WIP]** slack notification via webhook for blocks broken
+- **[WIP]** day/night easy theme switcher
+- **[ ]** currency toggle for other cryptonotes
 
 * TCP (stratum-like) protocol for server-push based jobs
   * Compared to old HTTP protocol, this has a higher hash rate, lower network/CPU server load, lower orphan
@@ -278,17 +283,10 @@ curl 127.0.0.1:18081/json_rpc -d '{"method":"getblockheaderbyheight","params":{"
   * Support / general discussion join #monero: https://webchat.freenode.net/?channels=#monero
   * Development discussion join #monero-dev: https://webchat.freenode.net/?channels=#monero-dev
 
-
-#### Pools Using This Software
-
-* http://teracycle.net
-
-
-
 Donations
 ---------
 * BTC: `19NFjoifjMys1cMmzWVSfZUMQpJm7zURmG`
-* MRO: `44bBEdVybk9aSYu9JfVDwjXb1zTrKJy1mCfW8EbiHb916Q9uHdv5UvfBccnLLEWCZfMZrP3VT4uCQFVvxcgoBygq6E5DWBA`
+* XMR: `44bBEdVybk9aSYu9JfVDwjXb1zTrKJy1mCfW8EbiHb916Q9uHdv5UvfBccnLLEWCZfMZrP3VT4uCQFVvxcgoBygq6E5DWBA`
 
 
 License
