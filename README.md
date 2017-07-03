@@ -242,37 +242,6 @@ curl 127.0.0.1:18081/json_rpc -d '{"method":"getblockheaderbyheight","params":{"
 **This progress is tracked via Trello publicly at:
 https://trello.com/b/PsqX8itf/teracycle-pool**
 
-- **[done]** automatic install script for ubuntu 16.x
-- **[WIP]** slack notification via webhook for blocks broken
-- **[WIP]** day/night easy theme switcher
-- **[ ]** currency toggle for other cryptonotes
-
-* TCP (stratum-like) protocol for server-push based jobs
-  * Compared to old HTTP protocol, this has a higher hash rate, lower network/CPU server load, lower orphan
-    block percent, and less error prone
-* IP banning to prevent low-diff share attacks
-* Socket flooding detection
-* Payment processing
-  * Splintered transactions to deal with max transaction size
-  * Minimum payment threshold before balance will be paid out
-  * Minimum denomination for truncating payment amount precision to reduce size/complexity of block transactions
-* Detailed logging
-* Ability to configure multiple ports - each with their own difficulty
-* Variable difficulty / share limiter
-* Share trust algorithm to reduce share validation hashing CPU load
-* Clustering for vertical scaling
-* Modular components for horizontal scaling (pool server, database, stats/API, payment processing, front-end)
-* Live stats API (using AJAX long polling with CORS)
-  * Currency network/block difficulty
-  * Current block height
-  * Network hashrate
-  * Pool hashrate
-  * Each miners' individual stats (hashrate, shares submitted, pending balance, total paid, etc)
-  * Blocks found (pending, confirmed, and orphaned)
-* An easily extendable, responsive, light-weight front-end using API to display data
-* Worker login validation (make sure miners are using proper wallet addresses for mining)
-
-
 ### Community / Support
 
 * [Monero Github](https://github.com/monero-project/bitmonero)

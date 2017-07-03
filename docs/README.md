@@ -31,16 +31,12 @@ curl -sL https://raw.githubusercontent.com/Teracycle/teracycle-pool/master/setup
 #### Configuration
 
 
-*Warning for Cyrptonote coins other than Monero:* this software may or may not work with any given cryptonote coin.
-Be wary of altcoins that change the number of minimum coin units because you will have to reconfigure several config
-values to account for those changes.
-
 [**Redis security warning**](http://redis.io/topics/security): be sure firewall access to redis - an easy way is to
 include `bind 127.0.0.1` in your `redis.conf` file. Also it's a good idea to learn about and understand software that
 you are using - a good place to start with redis is [data persistence](http://redis.io/topics/persistence).
 
 
-Explanation for each field:
+*Here is a brief description of most fields:*
 ```javascript
 {
     "coin": "monero", // name of the currency, affects the header branding.
@@ -245,37 +241,6 @@ curl 127.0.0.1:18081/json_rpc -d '{"method":"getblockheaderbyheight","params":{"
 #### Feature Roadmap
 **This progress is tracked via Trello publicly at:
 https://trello.com/b/PsqX8itf/teracycle-pool**
-
-- **[done]** automatic install script for ubuntu 16.x
-- **[WIP]** slack notification via webhook for blocks broken
-- **[WIP]** day/night easy theme switcher
-- **[ ]** currency toggle for other cryptonotes
-
-* TCP (stratum-like) protocol for server-push based jobs
-  * Compared to old HTTP protocol, this has a higher hash rate, lower network/CPU server load, lower orphan
-    block percent, and less error prone
-* IP banning to prevent low-diff share attacks
-* Socket flooding detection
-* Payment processing
-  * Splintered transactions to deal with max transaction size
-  * Minimum payment threshold before balance will be paid out
-  * Minimum denomination for truncating payment amount precision to reduce size/complexity of block transactions
-* Detailed logging
-* Ability to configure multiple ports - each with their own difficulty
-* Variable difficulty / share limiter
-* Share trust algorithm to reduce share validation hashing CPU load
-* Clustering for vertical scaling
-* Modular components for horizontal scaling (pool server, database, stats/API, payment processing, front-end)
-* Live stats API (using AJAX long polling with CORS)
-  * Currency network/block difficulty
-  * Current block height
-  * Network hashrate
-  * Pool hashrate
-  * Each miners' individual stats (hashrate, shares submitted, pending balance, total paid, etc)
-  * Blocks found (pending, confirmed, and orphaned)
-* An easily extendable, responsive, light-weight front-end using API to display data
-* Worker login validation (make sure miners are using proper wallet addresses for mining)
-
 
 ### Community / Support
 
