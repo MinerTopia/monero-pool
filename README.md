@@ -18,7 +18,7 @@ Technically you could run this pool on very little hardware, or a budget VPS, bu
 
 
 #### Thanks
-This project was originally forked from the work of zone117x, fancoder, gingeropolous, snipa22, mesh0000 and clintar.
+This project was originally forked from the work of zone117x, fancoder, gingeropolous, snipa22, mesh0000, thehihoguy and clintar.
 
 #### Install
 
