@@ -580,8 +580,8 @@ html {
             success: function (data) {
                 $('#loading').hide();
                 $('#page').show().html(data);
-                currentPage.update();
                 if (loadedCallback) loadedCallback();
+                currentPage.update();
             }
         });
     }
