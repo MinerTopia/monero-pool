@@ -376,31 +376,17 @@ html {
 <script>
         $(document).ready(function () {
           var trigger = $('.hamburger'),
-              overlay = $('.overlay'),
-             isClosed = false;
+              overlay = $('.overlay')// Starts closed
 
             trigger.click(function () {
-              hamburger_cross();      
-            });
+               isOpen = hamburger_cross(isOpen);
+            })
 
-            function hamburger_cross() {
+            isOpen = hamburger_cross(isOpen); // Initial flip
+            // $('[data-toggle="offcanvas"]').click(function () {
+            //   isOpen = hamburger_cross(isOpen)
+            // });
 
-              if (isClosed == true) {          
-                overlay.hide();
-                trigger.removeClass('is-open');
-                trigger.addClass('is-closed');
-                isClosed = false;
-              } else {   
-                overlay.show();
-                trigger.removeClass('is-closed');
-                trigger.addClass('is-open');
-                isClosed = true;
-              }
-          }
-          
-          $('[data-toggle="offcanvas"]').click(function () {
-                $('#wrapper').toggleClass('toggled');
-          });  
         });
 
     var docCookies = {
@@ -550,7 +536,9 @@ html {
     }
 
     window.onhashchange = function(){
-        routePage();
+      routePage(function(){
+        isOpen = hamburger_cross(isOpen)
+      });
     };
 
 
@@ -599,7 +587,6 @@ html {
     }
 
     function updateIndex(){
-        
         updateText('poolVersion', lastStats.config.version);
     }
 
@@ -648,7 +635,7 @@ html {
             <span id="poolVersion"></span>
         </nav>
 <div id="page-content-wrapper">
-          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+          <button type="button" class="hamburger animated fadeInLeft" data-toggle="offcanvas">
             <span class="hamb-top"></span>
             <span class="hamb-middle"></span>
             <span class="hamb-bottom"></span>
@@ -672,11 +659,9 @@ html {
 </div>
 
 
-       
-     
+
+
 
 </body>
 </footer>
 </html>
-
-
