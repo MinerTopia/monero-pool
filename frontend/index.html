@@ -525,7 +525,7 @@ html {
         }
     }
 
-    function pulseLiveUpdate(){
+    /* function pulseLiveUpdate(){
         var stats_update = document.getElementById('stats_updated');
         stats_update.style.transition = 'opacity 100ms ease-out';
         stats_update.style.opacity = 1;
@@ -533,7 +533,7 @@ html {
             stats_update.style.transition = 'opacity 7000ms linear';
             stats_update.style.opacity = 0;
         }, 500);
-    }
+    } */
 
     window.onhashchange = function(){
       routePage(function(){
@@ -548,7 +548,6 @@ html {
             dataType: 'json',
             cache: 'false'
         }).done(function(data){
-            pulseLiveUpdate();
             lastStats = data;
             updateIndex();
             currentPage.update();
