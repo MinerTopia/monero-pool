@@ -44,20 +44,33 @@ fi
 # load dependencies
 sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt -y upgrade
-sudo DEBIAN_FRONTEND=noninteractive apt -y install git curl tmux htop gcc build-essential cmake pkg-config libboost-all-dev redis-server libevent-dev libunbound-dev libminiupnpc-dev libunwind8-dev liblzma-dev libldns-dev libexpat1-dev libgtest-dev lmdb-utils libzmq3-dev graphviz doxygen libssl-dev
+sudo DEBIAN_FRONTEND=noninteractive apt -y install apache2 git curl tmux htop gcc build-essential cmake pkg-config libboost-all-dev redis-server libevent-dev libunbound-dev libminiupnpc-dev libunwind8-dev liblzma-dev libldns-dev libexpat1-dev libgtest-dev lmdb-utils libzmq3-dev graphviz doxygen libssl-dev
 cd ~
 git clone https://github.com/teracycle/teracycle-pool.git 
 cd teracycle-pool
-mv ~/teracycle-pool/frontend /var/www/pool
+# changing this to /var/www/html to cut out a few steps
+mv ~/teracycle-pool/frontend /var/www/html
 cd setup
-mv 000-default.conf /etc/apache2/sites-available/000-default.conf
-cd /etc/apache2/sites-available
-a2dissite 000-default.conf
-service apache2 reload
-a2ensite 000-default.conf
-service apache2 reload
+
+# mv 000-default.conf /etc/apache2/sites-available/000-default.conf
+# cd /etc/apache2/sites-available
+# a2dissite 000-default.conf
+# service apache2 reload
+# a2ensite 000-default.conf
+# service apache2 reload
 redis-server --daemonize yes
 ps aux | grep redis-server
+
+# get frontend ready
+# start API
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+source ~/.nvm/nvm.sh
+nvm install v0.10
+cd ~/teracycle-pool
+npm update
+npm install -g forever
+sudo systemctl daemon-reload
+
 
 # monero daemon
 cd ~
@@ -76,13 +89,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable monero
 sudo systemctl start monero
 
-# start API
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
-source ~/.nvm/nvm.sh
-nvm install v0.10
+# initiate launch
 cd ~/teracycle-pool
-npm update
-npm install -g forever
-sudo systemctl daemon-reload
 forever init.js
-#end tmux session with frontend + api
+
