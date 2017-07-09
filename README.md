@@ -1,10 +1,10 @@
 teracycle-pool
 ====================
-##### Teracycle-pool is a linux-based cryptonote currency mining pool, currently configured for Monero (XMR). API and frontend are NodeJS, with Redis as the database.
+##### Teracycle-pool is a linux-based cryptonote currency mining pool, currently configured for Monero (XMR), but Aeon or other cryptonote currencies would also be compatible with some tweaking. The API and frontend are NodeJS, with Redis as the database.
 
 ### Usage
 
-You will need a fresh Ubuntu Server 16 x64 install, preferably with a domain pointed at it.
+You will need a fresh Ubuntu Server 16 x64 install, preferably with a domain pointed at it. There is an automatic installer script in the works, but it is better used as a step-by-step for setup, as it is currently only able to take you 90% of the way, and isn't finished.
 
 #### Ideal Hardware Specs
 Technically you could run this pool on very little hardware, or a budget VPS, but if you're expecting to be able to handle enough users to make it profitable, you'll need something resembling the following:
@@ -15,14 +15,14 @@ Technically you could run this pool on very little hardware, or a budget VPS, bu
 * Net: 200mMbit/s
 * OS: Ubuntu 16.x
 
-
+Teracycle.net pool is currently deployed on a dedicated server, with roughly 2x the specs above.
 
 #### Thanks
-This project was originally forked from the work of zone117x, fancoder, gingeropolous, snipa22, mesh0000, thehihoguy and clintar.
+This project was originally forked from the work of zone117x, fancoder, gingeropolous, snipa22, mesh0000, thehihoguy and clintar. Without them, this project would not have happened. If you end up making it big with this software, consider throwing a few points their way.
 
 #### Install
 
-You can use the install script to set up the api, database and frontend automatically, or you can open the script and run through the code step by step.
+You can use the install script to set up the api, database and frontend automatically, or you can open the script and run through the code step by step. In general, copy-pasting commands from some stranger on the internet is ill-advised, but you can trust me :). Best practice would be to curl the script to a text file, and type the commands in one by one after you have verified their safety
 
 ```bash
 curl -sL https://raw.githubusercontent.com/Teracycle/teracycle-pool/master/setup/install.sh | bash
@@ -114,10 +114,16 @@ you are using - a good place to start with redis is [data persistence](http://re
 
     "payments": {
         "enabled": true, // payday timer on or off
-        "interval": 600, // how often to pay miners who earned a payout 600 = 10mins
-        "maxAddresses": 50, // how many at a time
+        "interval": 600, /*
+         This is how many seconds long the payment cycle for the miners who earned a payout is.
+         600 = 10 minutes
+         3600 = 1 hour
+         86400 = 1 day
+         604800 = 1 week
+         */
+        "maxAddresses": 50, // how many miners to pay at a time
         "mixin": 3, // 3 is the minimum
-        "transferFee": 5000000000, // mind the decimals. .005 i think?
+        "transferFee": 5000000000, // mind the decimals. .005 I think?
         "minPayment": 1000000000000, // 1XMR minimum for payout to reduce fees
         "denomination": 100000000000
     },
@@ -138,22 +144,22 @@ you are using - a good place to start with redis is [data persistence](http://re
         "port": 8117,
         "blocks": 30,
         "payments": 30,
-        "password": "Password898989" // admin page was removed. this is not needed currently
+        "password": "PasswordNotNeeded" // admin page was removed. this is not needed currently
     },
 
     "daemon": { // port for monero-daemon
-        "host": "127.0.0.1",
-        "port": 18081
+        "host": "127.0.0.1", // I suppose this -could- be a remote node, but why, other than laziness?
+        "port": 18081 // Make sure this matches your config
     },
 
     "wallet": { // port for monero-wallet-rpc
         "host": "127.0.0.1",
-        "port": 8082
+        "port": 8082 // Make sure this matches your config
     },
 
     "redis": { // port for database
         "host": "127.0.0.1",
-        "port": 6379,
+        "port": 6379, // Make sure this matches your config
         "auth": null
     }
 }
