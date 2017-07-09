@@ -6,7 +6,8 @@
 NC='\e[0;37m' # No Color
 RED='\e[0;31m'
 PURPLE='\e[0;35m'
-LPURP='\e[1;35m'
+# LPURP='\e[1;35m'
+LPURP='\e[1;37m'
 WHITE='\e[1;37m'
 
 # logo
@@ -26,10 +27,10 @@ echo -e "${PURPLE}=================================================${LPURP}v.0.9
 
 # make sure user isn't root
 if [ "$EUID" = 0 ]
-  then 
-    
+  then
+
     echo -e "${RED}You shouldn't run this setup as root."
-    
+
     echo -e "${NC}Press ${WHITE}[CTRL+C]${NC} now to exit, or I'll make a user for you in 15 seconds."
     sleep 15
     echo -e "${WHITE}Creating a non-root user with sudo privileges${NC}"
@@ -46,7 +47,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt -y upgrade
 sudo DEBIAN_FRONTEND=noninteractive apt -y install apache2 git curl tmux htop gcc build-essential cmake pkg-config libboost-all-dev redis-server libevent-dev libunbound-dev libminiupnpc-dev libunwind8-dev liblzma-dev libldns-dev libexpat1-dev libgtest-dev lmdb-utils libzmq3-dev graphviz doxygen libssl-dev
 cd ~
-git clone https://github.com/teracycle/teracycle-pool.git 
+git clone https://github.com/teracycle/teracycle-pool.git
 cd teracycle-pool
 # changing this to /var/www/html to cut out a few steps
 mv ~/teracycle-pool/frontend /var/www/html
@@ -92,4 +93,3 @@ sudo systemctl start monero
 # initiate launch
 cd ~/teracycle-pool
 forever init.js
-
