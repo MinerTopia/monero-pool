@@ -169,6 +169,11 @@ The file `config.json` is used by default but a file can be specified using the 
 ```bash
 forever init.js -config=config_backup.json
 ```
+[Forever](https://www.npmjs.com/package/forever) is a tool that is used with NodeJS apps to ensure that they stay up and running. Alternatives to Forever would be:
+* [PM2](https://www.npmjs.com/package/pm2)
+* [Nodemon](https://github.com/remy/nodemon)
+* [Phusion Passenger](https://github.com/phusion/passenger)
+* [Supervisor](https://github.com/petruisfan/node-supervisor)
 
 This software contains four distinct modules:
 * `pool` - Which opens ports for miners to connect and processes shares
@@ -186,8 +191,23 @@ forever init.js -module=api
 forever init.js -module=unlocker
 forever init.js -module=payments
 ```
+**TIP:** An easy way to keep track of all of these, rather than the overhead of running a GUI on your server, is to run TMUX. TMUX will let you split your terminal screen however many ways you want to, or arrange them into virtual-workspaces. You can also detach from your SSH session and reconnect to it later with everything still running how you left it. Here's an example:
+Log in to your server via SSH. Ubuntu 16 already has TMUX installed so just type `tmux` and hit ENTER. The only thing that changes is a green bar shows up at the bottom of the screen, which means TMUX is running successfuly. Here are a few shortcuts to help you navigate within TMUX.
 
-Edit the variables in the `website_example/config.js` file to use your pool's specific configuration.
+* To view running TMUX sessions, type `tmux ls`
+* To connect to a running session, type `tmux attach -t 0` If 0 is the session name.
+* Press `CTRL+B` and then `"` to split the screen horizontally.
+* To split the screen vertically, press `CTRL+B` and then `%`.
+* To move from window to window,  press `CTRL+B` and then press `UP/DOWN/LEFT/RIGHT`
+* To resize a window, press `CTRL+B` and then `CTRL+UP/DOWN/LEFT/RIGHT`
+* To create a new workspace, press `CTRL+B` and then `c`
+* To switch to the previous workspace,  press `CTRL+B` and then `p`
+* To switch to the next workspace, press `CTRL+B` and then `n`
+* To kill a window in a workspace, press `CTRL+B` and then `x`
+* To detach from your TMUX session, press `CTRL+B` and then `d`
+
+
+Edit the variables in the `frontend/config.js` file to use your pool's specific configuration.
 Variable explanations:
 
 ```javascript
