@@ -246,7 +246,8 @@ Log in to your server via SSH. Ubuntu 16 already has TMUX installed so just type
 * To kill a window in a workspace, press `CTRL+B` and then `x`
 * To detach from your TMUX session, press `CTRL+B` and then `d`
 
-
+#### Don't forget your wallet
+**TIP:**You need a wallet running to handle the payments that the API will try to make when you mine a block and need to pay miners. There's a script included called `launchewallet.sh` which contains a BASH one-liner that launched the wallet the proper way. A big part of my frustration trying this project for the first time was my wallet would be running but it would be refusing RPC commands from the API. This meant I had to do weekly manual payouts and answer countless messages about if the money is still there or not.
 
 
 #### Upgrading
