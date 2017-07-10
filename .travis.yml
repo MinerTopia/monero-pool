@@ -2,6 +2,7 @@ node_js:
   - "0.10"
 before_install:
   - npm install
+  - npm install node-gyp
 notifications:
   email:
     on_success: never
