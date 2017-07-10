@@ -17,6 +17,9 @@
         "multi-hashing": "git://github.com/zone117x/node-multi-hashing.git",
         "cryptonote-util": "git://github.com/Snipa22/node-cryptonote-util#xmr-Nan-2.0"
     },
+    "scripts": {
+    "test": "grunt travis -v"
+    },
     "engines": {
         "node": ">=0.10"
     }
