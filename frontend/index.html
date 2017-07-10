@@ -180,16 +180,6 @@
         }
     }
 
-    /* function pulseLiveUpdate(){
-        var stats_update = document.getElementById('stats_updated');
-        stats_update.style.transition = 'opacity 100ms ease-out';
-        stats_update.style.opacity = 1;
-        setTimeout(function(){
-            stats_update.style.transition = 'opacity 7000ms linear';
-            stats_update.style.opacity = 0;
-        }, 500);
-    } */
-
     window.onhashchange = function(){
       routePage(function(){
         isOpen = hamburger_cross(isOpen)
@@ -211,8 +201,7 @@
         });
     }
 
-/* Looks like this is where the controls for routing go.
-    I'm going to define the routes for the app views here */
+
     var xhrPageLoading;
     function routePage(loadedCallback) {
 
@@ -282,9 +271,6 @@
                 <li><a class="hot_link" data-page="market.html" href="#market">
                     <i class="fa fa-btc"></i> Market <sup>new!</sup>
                 </a></li>
-                <!-- <li><a class="hot_link" data-page="market.html" href="#market">
-                    <i class="fa fa-btc"></i> Donate <sup>new!</sup>
-                </a></li> -->
 
             </ul>
             <span id="poolVersion"></span>
