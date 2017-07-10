@@ -1,8 +1,14 @@
+language: node_js
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y node-gyp
 node_js:
   - "0.10"
+cache:
+  directories:
+    - "node_modules"
 before_install:
-  - npm install
-  - npm install node-gyp
+  - npm update
 notifications:
   email:
     on_success: never
