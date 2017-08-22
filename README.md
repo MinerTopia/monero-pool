@@ -1,6 +1,6 @@
-teracycle-pool
+Cryptonote-pool
 ====================
-##### Teracycle-pool is a linux-based cryptonote currency mining pool, currently configured for Monero (XMR), but Aeon or other cryptonote currencies would also be compatible with some tweaking. The API and frontend are NodeJS, with Redis as the database.
+##### Cryptonote-pool is a linux-based cryptonote currency mining pool, currently configured for Monero (XMR), but Aeon or other cryptonote currencies would also be compatible with some tweaking. The API and frontend are NodeJS, with Redis as the database.
 
 ### Usage
 
@@ -15,7 +15,7 @@ Technically you could run this pool on very little hardware, or a budget VPS, bu
 * Net: 200mMbit/s
 * OS: Ubuntu 16.x
 
-Teracycle.net pool is currently deployed on a dedicated server, with roughly 2x the specs above.
+MinerTopia.org pool is currently deployed on a dedicated serverd, with roughly 4x the specs above.
 
 #### Thanks
 This project was originally forked from the work of zone117x, fancoder, gingeropolous, snipa22, mesh0000, thehihoguy and clintar. Without them, this project would not have happened. If you end up making it big with this software, consider throwing a few points their way.
